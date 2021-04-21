@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 18, 2021, 10:42:34 AM
+    Author     : SHIVANAND
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+* {
+	box-sizing: border-box;
+}
+body {
+    margin:0 auto;
+padding:0px;
+text-align:center;
+width:100%;
+background:url("img/curr.jpg");
+font-family: 'Muli', sans-serif;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover; 
+padding-top: 75px;
+padding-bottom: 50px;
+margin: 12% auto;
+max-width: 660px;
+}
+.container{
+
+ text-align:center;
+ width:995px;
+position: relative;
+padding-top: 6%;
+padding-bottom: 6%;
+margin: 12% auto;
+background-color: rgba(0, 0, 0, 0.5);
+max-width: 660px;
+    
+}
+
+.currency {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.currency select {
+background: transparent;
+background-repeat: no-repeat, repeat;
+background-position: right .2em top 50%, 0 0;
+background-size: .50em auto, 100%;
+color: #fff;
+border: 0;
+padding-right: 20px;
+font-size: 22px;
+appearance: none;
+}
+.currency input {
+	border: 0;
+	background: transparent;
+	font-size: 22px;
+	color: #fff;
+	text-align: right;
+}
+.middle {
+	color: #101010;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.middle button {
+	background-color: #fff;
+	border: 2px solid #ecf0f1;
+	border-radius: 50%;
+	cursor: pointer;
+	color: #f59300;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	width: 30px;
+	transform: rotate(90deg);
+}
+.middle button:active {
+	transform: rotate(90deg) scale(0.9);
+}
+.middle .rate {
+	background-color: #fff;
+	border: 2px solid #ecf0f1;
+	border-radius: 50px;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	padding: 0 10px;
+	margin: 30px 15px 30px 25px;
+}
+select:focus, input:focus, button:focus {
+	outline: 0;
+}
