@@ -4,19 +4,17 @@
  * and open the template in the editor.
  */
 
-
-
 const from_currencyEl = document.getElementById('from_currency');
-const from_ammountEl = document.getElementById('from_ammount');
+const from_amountEl = document.getElementById('from_amount');
 const to_currencyEl = document.getElementById('to_currency');
-const to_ammountEl = document.getElementById('to_ammount');
+const to_amountEl = document.getElementById('to_amount');
 const rateEl = document.getElementById('rate');
 const exchange = document.getElementById('exchange');
 
 from_currencyEl.addEventListener('change', calculate);
-from_ammountEl.addEventListener('input', calculate);
+from_amountEl.addEventListener('input', calculate);
 to_currencyEl.addEventListener('change', calculate);
-to_ammountEl.addEventListener('input', calculate);
+to_amountEl.addEventListener('input', calculate);
 
 exchange.addEventListener('click', () => {
 	const temp = from_currencyEl.value;
@@ -34,8 +32,7 @@ function calculate() {
 		.then(res => {
 		const rate = res.rates[to_currency];
 		rateEl.innerText = `1 ${from_currency} = ${rate} ${to_currency}`
-		to_ammountEl.value = (from_ammountEl.value * rate).toFixed(2);
+		to_amountEl.value = (from_amountEl.value * rate).toFixed(2);
 	})
 }
-
 calculate();

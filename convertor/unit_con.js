@@ -43,7 +43,6 @@ property[9] = "Power";
 unit[9] = new Array("Watt (W)", "Kilowatt (kW)", "Megawatt (MW)", "Milliwatt (mW)");
 factor[9] = new Array(1, 1000, 1000000, .001, );
 
-
 property[10] = "Temperature";
 unit[10] = new Array("Degrees Celsius ('C)", "Degrees Fahrenheit ('F)", "Degrees Kelvin ('K)");
 factor[10] = new Array(1, 0.555555555555, 1);
@@ -56,10 +55,6 @@ factor[11] = new Array(1, 3600, 60, 31536000);
 property[12] = "Velocity & Speed";
 unit[12] = new Array("Meter/second (m/sec)", "Kilometer/hour (kph)", "Knot (int'l)");
 factor[12] = new Array(1, .2777779, .5144444);
-
-property[13] = "Volume Flow";
-unit[13] = new Array("Cubic meter/second", "Cubic foot/second", "Cubic foot/minute", "Cubic inches/minute", "Gallons (US,liq)/minute)");
-factor[13] = new Array(1, .02831685, .0004719474, 2.731177E-7, 6.309020E-05);
 
 function UpdateUnitMenu(propMenu, unitMenu) {
   var i;
@@ -103,13 +98,11 @@ function ConvertFromTo(sourceForm, targetForm) {
 
 
   result = sourceForm.unit_input.value;
-  // Handle Temperature increments!
   if (property[propIndex] == "Temperature") {
     result = parseFloat(result) + tempIncrement[sourceIndex];
   }
   result = result * sourceFactor;
   result = result / targetFactor;
-  // Again, handle Temperature increments!
   if (property[propIndex] == "Temperature") {
     result = parseFloat(result) - tempIncrement[targetIndex];
   }
